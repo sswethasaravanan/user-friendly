@@ -39,19 +39,15 @@ nav a:hover {
 }
 
 .container {
-  display: flex;
-  gap: 20px;
-  padding: 30px;
-  justify-content: center;
-  flex-wrap: wrap;
+  padding: 30px 20px;
 }
 
 .card {
   background: white;
   border-radius: 15px;
   padding: 20px;
-  max-width: 450px;
-  flex: 1 1 300px;
+  max-width: 700px;
+  margin: 0 auto 30px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s;
 }
@@ -60,9 +56,49 @@ nav a:hover {
   transform: translateY(-5px);
 }
 
-.card img {
-  width: 100%;
-  border-radius: 10px;
+.gallery-section {
+  text-align: center;
+  margin: 40px 0;
+}
+
+.gallery-section h2 {
+  margin-bottom: 20px;
+}
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.gallery img {
+  width: 300px;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  transition: transform 0.3s;
+}
+
+.gallery img:hover {
+  transform: scale(1.05);
+}
+
+.youtube-btn {
+  display: inline-block;
+  margin-top: 15px;
+  background: #d81b60;
+  color: white;
+  padding: 12px 20px;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.3s, transform 0.3s;
+}
+
+.youtube-btn:hover {
+  background: #ad1457;
+  transform: scale(1.05);
 }
 
 footer {
@@ -74,32 +110,30 @@ footer {
   margin-top: 40px;
 }
 
-/* Responsive styles */
+/* Responsive Styles */
 @media (max-width: 768px) {
-  header h1 {
-    font-size: 22px;
-  }
-
   nav ul {
     flex-direction: column;
     align-items: center;
   }
 
-  .container {
+  header h1 {
+    font-size: 24px;
+  }
+
+  .gallery {
     flex-direction: column;
-    padding: 20px 10px;
   }
 
-  .card {
-    margin-bottom: 20px;
+  .gallery img {
+    width: 90%;
   }
 
-  p, h2 {
-    text-align: center;
+  .card, .gallery-section {
+    padding: 10px;
   }
 
-  nav a {
-    display: block;
-    margin-bottom: 10px;
+  .youtube-btn {
+    padding: 10px 15px;
   }
 }
